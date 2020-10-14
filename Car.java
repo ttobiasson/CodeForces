@@ -1,4 +1,4 @@
-public class Car extends  Vehicle{
+public class Car{
     public void changeGear(){
 
     }
