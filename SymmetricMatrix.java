@@ -6,8 +6,7 @@ public class SymmetricMatrix {
         Scanner sc = new Scanner(System.in);
         int goodTiles = 0;
         int tests = sc.nextInt();
-        int count = 1;
-        int p = 0;
+
         for (int t = 0; t < tests; t++) {
             int n = sc.nextInt();
             int m = sc.nextInt();
