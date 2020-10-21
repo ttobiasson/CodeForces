@@ -1,4 +1,5 @@
 #include<iostream>
+#include<math.h>
 
 using namespace std;
 
@@ -9,25 +10,9 @@ int main(){
     cin >> t;
     for(int i = 0; i < t; i++){
         cin >> x >> y >> k;
-        long long sticksNeeded = y * k + k;
-        long long sticks = 1;
-        long long trades = 0;
-        long long coal = 0;
-
-        trades = sticksNeeded / (x - 1);
-        trades += k / coal;
-        
-        if(sticksNeeded / x - 1 % 2 != 0){
-            trades++;
-        }
-        
-        
-
-        if(k / coal % 2 != 0){
-            trades++;
-        }
-
-        cout << trades << endl;
+        long long sticksNeeded = ((k * y + k - 1+(x-2))/ (x-1)) + k;
+        long long answer = (k * y + k - 1) % (x - 1) != 0 ? ((k * y + k - 1+(x-2))/ (x-1)) + k : ((k * y + k - 1)/ (x-1)) + k ;
+        cout << sticksNeeded << endl;
     }
 
 }
