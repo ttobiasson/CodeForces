@@ -14,14 +14,7 @@ public class DigitGame {
             else if(digits % 2 == 0)
                 System.out.println(2);
             else
-                System.out.println(1);
-            
-                
-
-            
+                System.out.println(1);   
         }
-        
-    
-    
     }
 }
