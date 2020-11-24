@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class NumberOfApartments {
-    public static void main(String[] args) {
+    public static void main(String ... args) {
         Scanner sc = new Scanner(System.in);
 
         int tests = sc.nextInt();
@@ -15,16 +15,16 @@ public class NumberOfApartments {
             if  (windows >= 3 && windows != 4){
                 while (windows > 0){                    
                     if (windows % 3 == 0){
-                        threes++;
-                        windows -= 3;
+                        threes += windows/3;
+                        windows = 0;
                     }
                     else if (windows % 5 == 0){
-                        fives++;
-                        windows -= 5;
+                        fives += windows/5;
+                        windows = 0;                    
                     }
                     else if (windows % 7 == 0){
-                        sevens++;
-                        windows -= 7;
+                        sevens += windows/7;
+                        windows = 0;                    
                     }
                     else{
                         acc++;
@@ -57,4 +57,5 @@ public class NumberOfApartments {
 
         }
     }
+   
 }
