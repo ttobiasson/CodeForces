@@ -31,6 +31,15 @@ public class PrimeSquare{
                 }
                 
             }
+            if(n % 2 != 0){
+                for(int i = 0; i < n; i++){
+                    for(int j = 0; j < n; j++){
+                        m1[i][j] += (j == (n-1)/2 || j == (n+1)/2 )&& n-j == i ? 1 : 0;
+                    }
+                    
+                }   
+            }
+
             for(int[]arr:m1){
                 System.out.println();
                 for(int m : arr){
